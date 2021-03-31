@@ -175,7 +175,7 @@ const searchName = (req, res) => {
 
   return Cat.findByName(req.query.name, (err, doc) => {
     if(err) {
-      return res,status(500).json({err});
+      return res.status(500).json({err});
     }
 
     if(!doc) {
@@ -196,7 +196,7 @@ const searchNameDog = (req, res) => {
 
   return Dog.findByNameDog(req.query.name, (err, doc) => {
     if(err) {
-      return res,status(500).json({err});
+      return res.status(500).json({err});
     }
 
     if(!doc) {
